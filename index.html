@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Driive me</title>
+    <style>
+        img.container_car {
+            margin: 0 auto;
+            margin-top: -4%;
+            position: relative;
+            animation-name: monAnimationCar;
+            /*Lien vers le keyframes et le nom de l'animation*/
+            animation-duration: 4s;
+            /*Le temps de l'animation total */
+            animation-timing-function: linear;
+            /* appuyer sur "c" cubix de bézier c'est la vitesse*/
+            animation-iteration-count: infinite;
+            /*répétion infiny ou mettre une valeur exemple 10 fois il se repete*/
+        }
+        
+        @keyframes monAnimationCar {
+            0% {
+                top: 0;
+                left: -100%;
+            }
+            100% {
+                top: 0;
+                left: 100%;
+            }
+        }
+        
+        img.container_car1 {
+            margin: 0 auto;
+            margin-top: -4%;
+            position: relative;
+            animation-name: monAnimationCar1;
+            /*Lien vers le keyframes et le nom de l'animation*/
+            animation-duration: 9s;
+            /*Le temps de l'animation total */
+            animation-timing-function: linear;
+            /* appuyer sur "c" cubix de bézier c'est la vitesse*/
+            animation-iteration-count: infinite;
+            /*répétion infiny ou mettre une valeur exemple 10 fois il se repete*/
+        }
+        
+        @keyframes monAnimationCar1 {
+            0% {
+                top: 0;
+                left: -100%;
+            }
+            100% {
+                top: 0;
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container_header">
+            <!-- logo du site a placer en haut a gauche -->
+            <a href="#" title="Accueil"><img src="http://www.driiveme.com/Images/logo-driiveme.svg" alt="logo driive me" id="logo_driive_me" /></a>
+            <!-- faire le logo en svg -->
+
+            <ul class="nav_bar_header">
+                <li><a href="#" class=nav_bar_header_li>S'inscrire</a></li>
+                <li><a href="#" class=nav_bar_header_li>connecter</a></li>
+                <li><a href="#" class=nav_bar_header_li>Aide</a></li>
+                <li><a href="#" class=nav_bar_header_li>Rechercher une location</a></li>
+                <li>
+                    <a href="#" class=nav_bar_header_li><img src="http://www.driiveme.com/Images/flag/flag-FR.png" alt="Drapeau de france" title="Langue" /></a>
+                    <!--
+                        <select class="navbar_header_select" onchange="location = this.option[this.selectIndex].value"> 
+                        <option value="../style/style.css"><img src="http://www.driiveme.com/Images/flag/flag-FR.png" alt="Drapeau de france" title="Langue" /></option>
+                        <option value=""><img src="http://www.driiveme.com/Images/flag/flag-FR.png" alt="Drapeau de france" title="Langue" /></option>
+                        <option value=""><img src="http://www.driiveme.com/Images/flag/flag-FR.png" alt="Drapeau de france" title="Langue" /></option>
+                    </select>
+                    -->
+                </li>
+                <li><a href="#" class=nav_bar_header_li>Un véhicule à d&eacute;placer ?</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="container_find">
+        <!--<section class="container_img">
+        <img src="http://www.driiveme.com/Images/hero-cloud.png" alt="nuage" />
+        <section>-->
+        <h1>
+            <img src="http://www.driiveme.com/Images/hero-cloud-sun.png" alt="sun" /> LOUER UNE VOITURE
+            <br />
+            <span>EN ALLER SIMPLE POUR 1 EURO</span>
+        </h1>
+
+        <h3>Les loueurs doivent rapatrier leurs véhicules,
+            <span>Faites-le pour 1 euro!</span>
+            <img src="http://www.driiveme.com/Images/hero-cloud.png" alt="nuage" />
+
+        </h3>
+
+
+
+        <section class="find">
+            <section class="find_A">
+                <p>
+                    <form class="formulaire_form" action="formulaire.html" method="GET">
+                        <fielset>
+                            <label for="lieu">
+                                <img src="http://www.driiveme.com/Images/icon-pin-departure.png" alt="Lettre A couleur vert" />
+                            <span class="formulaire_span_A"></span><label>
+                            <input class="formulaire_input" name="lieu" id="lieu" placeholder="Ville de départ" />
+                        </fielset>
+                    </form>
+                    </p>
+            </section>
+
+            <section class="find_B">
+                <p>
+                    <form class="formulaire_form" action="formulaire.html" method="GET">
+                        <fielset>
+                            <label for="lieu">
+                                <img src="http://www.driiveme.com/Images/icon-pin-destination.png" alt="Lettre B couleur rouge" />    
+                            <span class="formulaire_span_B"></span> 
+                            </label>
+                            <input class="formulaire_input" name="lieu" id="lieu" placeholder="Ville d'arrivée" />
+                        </fielset>
+                    </form>
+                </p>
+
+            </section>
+            <section class="find_location">
+                <p>
+                    <a href="http://www.driiveme.com/rechercher-trajet.html?actionForm=search-trajet&cityDeparture=&cityDepartureId=&cityDepartureSave=&cityDestination=&cityDestinationId=&cityDestinationSave=" title="Rechercher">RECHERCHER LOCATION</a></p>
+            </section>
+        </section>
+
+        <section class="container_image">
+            <img src="http://www.driiveme.com/Images/hero-skyline.png" alt="Batiment gris" class="container_building" />
+            <img src="http://www.driiveme.com/Images/hero-car-group.png" alt="voiture et camion" class="container_car" />
+            <img src="http://www.driiveme.com/Images/hero-car-group.png" alt="voiture et camion" class="container_car1" />
+
+        </section>
+        <section class="container_imageAB">
+            <img src="http://www.driiveme.com/Images/hero-pins.png" alt="big point A and B" class="container_bigAB" />
+            <img src="http://www.driiveme.com/Images/hero-tree.png" alt="tree" class="container_bigAB">
+            <img src="http://www.driiveme.com/Images/hero-tree.png" alt="tree" class="container_bigAB">
+            <img src="http://www.driiveme.com/Images/hero-pins.png" alt="big point A and B" class="container_bigAB" />
+        </section>
+        <section class="container_footer">
+            <p>Locations assurées par <img src="http://www.driiveme.com/Images/logo-allianz-gray.png" alt="logo Alliance" /p>
+        </section>
+        <section class="container_deroulant_h2">
+            <h2>
+                LES LOCATIONS DE DERNIÈRES MINUTES<br />
+                <span class="border_line_h2">_____________</span>
+            </h2>
+        </section>
+
+        <section class="container_deroulant_inlineall">
+            <div class="container_deroulant_inline1">
+                <div class="container_deroulant_img">
+                    <center>
+                        <h2 class="container_deroulant_img_h2">Lyon (aeroport)</h2>
+                        <p>Toulouse (Simplon Midi-pyrénées)</p>
+                    </center>
+                    <a href="" title="Citadine manuel 2 places"><img src="http://www.driiveme.com/Medias/Vehicle/vehicle-category-1-sm.png" alt="Car Mini white" /></a>
+                </div>
+            </div>
+            <div class="container_deroulant_inline2">
+                <div class="container_deroulant_img">
+                    <center>
+                        <h2 class="container_deroulant_img_h2">Strasbourg (Simplon &Eacute;pinal)</h2>
+                        <p>Bretagne (Kercode Simplon)</p>
+                    </center>
+                    <a href="" title="Monospace manuel 4 places"><img src="http://www.driiveme.com/Medias/Vehicle/vehicle-category-4.png" alt="Car Volkswagen black" /></a>
+                </div>
+            </div>
+            <div class="container_deroulant_inline3">
+                <div class="container_deroulant_img">
+                    <center>
+                        <h2 class="container_deroulant_img_h2">ILE-DE-FRANCE (Paris)</h2>
+                        <p>Lyon (Simplon Lyon les meilleurs)</p>
+                    </center>
+                    <a href="" title="Citadine manuel 5 places"><img src="http://www.driiveme.com/Medias/Vehicle/vehicle-category-1.png" alt="Car Citroen white" /></a>
+                </div>
+            </div>
+            <div class="container_deroulant_inline4">
+                <div class="container_deroulant_img">
+                    <center>
+                        <h2 class="container_deroulant_img_h2">Boulogne-sur-mer (Simplon)</h2>
+                        <p>La réunion (Saint-andré)</p>
+                    </center>
+                    <a href="" title="Monospace manuel 4 places"><img src="http://www.driiveme.com/Medias/Vehicle/vehicle-category-4.png" alt="Car volkswagen black" /></a>
+                </div>
+            </div>
+        </section>
+        <section class="commentsamarche_column">
+            <div class="commentsamarche_block_column">
+                <h2 class="commentsamarche_h2">COMMENT SA MARCHE ? </h2>
+                <p>Le concept<br />
+                    <span class "commentsamarche-span">en 1 minute</span></p>
+                <section class="commentsamarche_flexpc">
+                    <img class="commentsamarche_imgpc" src="http://www.driiveme.com//Images/icon-computer-video.png" alt="vidéo location 1 euro">
+                </section>
+
+            </div>
+            <div class="commentsamarche_block_column">
+                <div class="commentsamarche_block_flexor1">
+                    <img src="http://www.driiveme.com/Images/icon-reservation-key.png" alt="key blue" />
+                    <h2>Une location pour un aller simple <br /> <span>Pour 1 euro symbolique, vous louez une voiture ou un utilitaire en aller simple (d'une ville A vers une ville B).</span></h2>
+                </div>
+                <div class="commentsamarche_block_flexor2">
+                    <img src="http://www.driiveme.com/Images/icon-reservation-time.png" alt="Horloge blue" />
+                    <h2>Durée de location & kilométrage <br /> <span>Vous avez le droit à 24 heures de location et suffisamment de kilomètres pour faire un petit détour.</span></h2>
+                </div>
+                <div class="commentsamarche_block_flexor3">
+                    <img src="http://www.driiveme.com/Images/icon-reservation-insurance.png" alt="parapluie blue" />
+                    <h2>Assurance tous risques <br /> <span>Durant toute la durée de votre voyage, vous êtes couvert grâce à notre partenaire Allianz.</span></h2>
+                </div>
+                <div class="commentsamarche_block_flexor4">
+                    <img src="http://www.driiveme.com/Images/icon-reservation-gas.png" alt="goute blue" />
+                    <h2>Carburant & Péages <br /> <span>Comme dans toute location, les frais de route (carburant & péages) restent à votre charge. Vous pouvez faire du covoiturage pour réduire ces frais.</span></h2>
+                </div>
+            </div>
+        </section>
+
+
+
+</body>
+<!-- ################################################################################ -->
+
+</html>
