@@ -240,6 +240,7 @@ des ul et li dans le form
 }
 
 .container_image {
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     flex-direction: column;
